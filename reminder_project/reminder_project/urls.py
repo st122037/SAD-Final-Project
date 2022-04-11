@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from reminder_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('reminders/', views.ReminderView.as_view(), name="index")
 ]
