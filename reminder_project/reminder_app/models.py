@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -31,8 +30,6 @@ class Reminder(models.Model):
 
     def __str__(self):
         return f"{self.title}: due {self.due_date}"
-
-
 
 
 class User(models.Model):
