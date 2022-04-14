@@ -18,10 +18,11 @@ class ReminderForm(forms.ModelForm):
         priority = forms.CharField(widget=forms.Select(choices=priority, attrs={'class': 'form-control','style': 'width:550px; height:40px;'}))
         description = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','style': 'width:550px; height:170px;'}))
         tags = forms.JSONField(widget=forms.Textarea(attrs={'class': 'form-control','style': 'width:550px; height:100px;'}))
+        editors = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','style': 'width:550px; height:100px;'}))
+        viewers = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','style': 'width:550px; height:100px;'}))
 
-
-        # created_date = forms.DateTimeField(widget=forms.DateTimeInput)
-        # due_date = forms.DateTimeField(widget=forms.DateTimeField(attrs={'class': 'form-control'}))
+        created_date = forms.DateTimeField(widget=forms.DateTimeInput)
+        due_date = forms.DateTimeField(widget=forms.DateTimeInput)
     
         class Meta:
             model = Reminder

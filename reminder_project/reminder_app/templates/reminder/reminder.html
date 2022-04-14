@@ -6,9 +6,12 @@
 <br/>
 <br/>
 <h1>Reminder</h1>
+<br>
 <div>
-    <a class="btn btn-secondary" href="create_reminder" role="button" style="float:right">Create Reminder</a>
+    <a class="btn btn-secondary" href="create_reminder" role="button" style="float:left">Create Reminder</a>
 </div>
+<br>
+<div class="table-responsive">
 <table class="table" style="margin-top: 5%;">
   <thead class="thead-dark">
     <tr>
@@ -17,6 +20,8 @@
       <th scope="col">Status</th>
       <th scope="col">Priority</th>
       <th scope="col">Tags</th>
+      <th scope="col">Editors</th>
+      <th scope="col">Viewers</th>
       <th scope="col">Created At</th>
       <th scope="col">Due date</th>
     </tr>
@@ -30,10 +35,14 @@
               <td>{{ each.status }}</td>
               <td>{{ each.priority }}</td>
               <td>{{ each.tags }}</td>
+              <td>{{ each.editors }}</td>
+              <td>{{ each.viewers }}</td>
               <td>{{ each.created_date }}</td>
               <td>{{ each.due_date }}</td>
               <td>
                 <a href="edit_reminder" class="btn btn-primary">Edit</a>
+              </td>
+              <td>
                 <a href="delete_reminder" class="btn btn-danger">Delete</a>
               </td>
             </tr>
@@ -45,4 +54,5 @@
     {% endif %}
   </tbody>
 </table>
+</div>
 {% endblock %}
