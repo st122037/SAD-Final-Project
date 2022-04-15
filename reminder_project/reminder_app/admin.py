@@ -6,3 +6,4 @@ from reminder_app.models import Reminder, User
 
 admin.site.register(User)
 admin.site.register(Reminder)
+# admin.site.register(ReminderList)
