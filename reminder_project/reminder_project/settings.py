@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'ReminderDB',
         'CLIENT': {
             'host': 'localhost',
-            'port': 27017,
+            'port': 27018,
             'username': 'root',
             'password': 'example',
         },
